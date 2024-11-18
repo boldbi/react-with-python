@@ -28,9 +28,7 @@ The samples require the following to run.
 
 ### Run a Sample Using Visual Studio Code
 
-1. Please get the [React with Python](https://github.com/boldbi/react-with-python)  sample from GitHub.
-
- 2. The React application acts as a client, and the Python application acts as a server. In the `models.py` file of the Python application, you need to set the User Email and Embed Secret properties.
+ 1. The React application acts as a client, and the Python application acts as a server. In the `models.py` file of the Python application, you need to set the User Email and Embed Secret properties.
 
     <meta charset="utf-8"/>
     <table>
@@ -46,15 +44,15 @@ The samples require the following to run.
     </tbody>
     </table>
 
- 3. Once you have provided the details, run the application using the command "python manage.py runserver." The application will be running on port number 8000.
+ 2. Once you have provided the details, run the application using the command "python manage.py runserver." The application will be running on port number 8000.
 
- 4. Then, once you run your Python application, you will see results similar to those of the React application.
+ 3. Then, once you run your Python application, you will see results similar to those of the React application.
 
-    ![Python Backend API](/static/assets/javascript/sample/images/react-with-python-backend.png)
+    ![Python Backend API](https://github.com/user-attachments/assets/807e6a2e-288a-4003-9d9d-72e127d840f9)
 
- 5. To run the React application, we need to set the following properties in the DashboardListing.js file:
+ 4. To run the React application, we need to set the following properties in the DashboardListing.js file:
 
-    ![DashboardListing](/static/assets/javascript/sample/images/react-with-python-dashboardlisting.png)
+    ![DashboardListing](https://github.com/user-attachments/assets/02d3ebed-06dc-4655-94f4-3f365b1bd8cb)
 
     <meta charset="utf-8"/>
     <table>
@@ -90,9 +88,9 @@ The samples require the following to run.
     </tbody>
     </table>
 
- 6. Once you provide these details, run the command “npm install.” After all the packages are installed, run the command “npm start.”
+ 5. Once you provide these details, run the command “npm install.” After all the packages are installed, run the command “npm start.”
 
-    ![React with Python](/static/assets/javascript/sample/images/react-with-python-alldashboard.png)
+    ![Dashboard view](https://github.com/user-attachments/assets/d2087208-c693-4e0d-8441-cd7e5a8f0a64)
 
 > **NOTE:** If the API host is already in use, modify the port number per your preference in embed.js and update that Dashboard.js file.
 
