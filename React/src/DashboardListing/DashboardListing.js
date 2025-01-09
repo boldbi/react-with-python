@@ -15,15 +15,14 @@ const environment = "enterprise";
 const apiHost="http://localhost:8000"
 
 //Bold BI Server URL (ex: http://localhost:5000/bi, http://demo.boldbi.com/bi)
-const rootUrl = "http://localhost:53623/bi/";
+const rootUrl = "http://localhost:60951/bi/";
 
 //Url of the GetDetails action in ValuesController of the ASP.NET Core application
 const authorizationUrl="/get_embed_details";
 
 //Enter your BoldBI credentials here
-const userEmail= ""; 
-const userPassword= ""; 
-// var BoldBiObj;
+const userEmail= "";
+const embedSecret= "";
 
 class DashboardListing extends React.Component {
    constructor(props){
@@ -62,8 +61,15 @@ class DashboardListing extends React.Component {
             </div>
             <div id="panel">
               {this.state.items.map((el) => 
-                <button className="dashboard-item" attr-name ={el.Name} attr-id = {el.Id} value={el} onClick={((e) => this.renderDashboard(el))} >
-                {el.Name}
+                <button 
+                  key={el.Id}
+                  className="dashboard-item" 
+                  attr-name={el.Name} 
+                  attr-id={el.Id} 
+                  value={el} 
+                  onClick={() => this.renderDashboard(el)}
+                >
+                  {el.Name}
                 </button>
               )}
             </div>
@@ -79,17 +85,18 @@ class DashboardListing extends React.Component {
     // var dashboard = undefined;
     var querystring = require('querystring');
     var token = "";
-    Axios.post(rootUrl+'api/'+ siteIdentifier +'/get-user-key',
+    Axios.post(rootUrl+'api/'+ siteIdentifier +'/token',
     querystring.stringify({
-            UserId: userEmail,
-            Password: userPassword
+            username: userEmail,
+            embed_secret: embedSecret,
+            grant_type: "embed_secret"
     }), {
       headers: { 
         "Content-Type": "application/x-www-form-urlencoded"
       }
     }).then(response => {
           var result = response;
-          token = JSON.parse(result.data.Token).access_token;
+          token = result.data.access_token;
           this.setState({ toke: token});
           //Get Dashboards
       Axios.get(rootUrl+'api/'+ siteIdentifier +'/v2.0/items?ItemType=2',
