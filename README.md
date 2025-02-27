@@ -4,7 +4,7 @@ This project was created using React with Python. This application aims to demon
 
 ## Dashboard view
 
-   ![Dashboard view](images/387089149-d2087208-c693-4e0d-8441-cd7e5a8f0a64.png)
+   ![Dashboard view](images/dashboard-view.png)
 
 ## Prerequisites
 
