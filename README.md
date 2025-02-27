@@ -4,7 +4,7 @@ This project was created using React with Python. This application aims to demon
 
 ## Dashboard view
 
-   ![Dashboard view](https://github.com/user-attachments/assets/d2087208-c693-4e0d-8441-cd7e5a8f0a64)
+   ![Dashboard view](images/387089149-d2087208-c693-4e0d-8441-cd7e5a8f0a64.png)
 
 ## Prerequisites
 
@@ -48,11 +48,11 @@ The samples require the following to run.
 
  3. Then, once you run your Python application, you will see results similar to those of the React application.
 
-    ![Python Backend API](https://github.com/user-attachments/assets/807e6a2e-288a-4003-9d9d-72e127d840f9)
+    ![Python Backend API](images/backend-api.png)
 
  4. To run the React application, we need to set the following properties in the DashboardListing.js file:
 
-    ![DashboardListing](https://github.com/user-attachments/assets/02d3ebed-06dc-4655-94f4-3f365b1bd8cb)
+    ![DashboardListing](images/dashboard-listing.png)
 
     <meta charset="utf-8"/>
     <table>
@@ -90,7 +90,7 @@ The samples require the following to run.
 
  5. Once you provide these details, run the command “npm install.” After all the packages are installed, run the command “npm start.”
 
-    ![Dashboard view](https://github.com/user-attachments/assets/d2087208-c693-4e0d-8441-cd7e5a8f0a64)
+    ![Dashboard view](images/dashboard-view.png)
 
 > **NOTE:** If the API host is already in use, modify the port number per your preference in embed.js and update that Dashboard.js file.
 
